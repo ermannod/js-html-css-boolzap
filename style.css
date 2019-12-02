@@ -162,6 +162,7 @@ a{
 
 .history {
   height:77.8%;
+  overflow: overlay;
 }
 
 .conv {
@@ -228,6 +229,19 @@ a{
   height: 84%;
   background: url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png');
   padding: 40px 80px;
+  overflow: overlay;
+}
+
+::-webkit-scrollbar{
+  width: 6px;
+}
+
+::-webkit-scrollbar-track{
+  opacity: 0;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: darkgrey;
 }
 
 .box {
@@ -237,6 +251,10 @@ a{
   padding: 5px 17px 13px 10px;
   position: relative;
   font-size: 20px;
+}
+
+.box:not(:last-child){
+  margin-bottom: 10px;
 }
 
 .friendchat{

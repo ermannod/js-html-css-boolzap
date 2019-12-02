@@ -6,6 +6,11 @@ $(document).ready(function() {
     $('.bottom i').removeClass("fa-microphone-alt");
     $('.bottom i').addClass("fa-arrow-circle-right");
   });
+  
+  $('.bottom i').click(function(){
+    $('.bottom i').addClass("fa-microphone-alt");
+    $('.bottom i').removeClass("fa-arrow-circle-right");
+  });
 
  // Get value from input field
   var newMess = $('#mynewmess').val($('#mynewmess').val());
