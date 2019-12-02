@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="script.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>WhatsApp</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div id="backgreen"></div>
+      <div id="backgrey"></div>
+      <div class="container main">
+        <div id="side-menu">
+          <div class="container topbar">
+            <div class="profile">
+              <a href="#">
+                <img src="https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg" alt="">
+              </a>
+            </div>
+            <div class="topicons">
+              <a href="#">
+                <i class="fas fa-circle-notch"></i>
+              </a>
+              <a href="#">
+                <i class="fas fa-comment-alt"></i>
+              </a>
+              <a href="#">
+                <i class="fas fa-ellipsis-v"></i>
+              </a>
+            </div>
+          </div>
+          <div class="container alert">
+            <div class="profile">
+              <a href="#"><i class="fas fa-comment-slash"></i></a>
+            </div>
+            <div class="side-text">
+              <h4>Ricevi notifiche di nuovi messaggi</h4>
+              <a href="#">Attiva notifiche desktop</a>
+            </div>
+          </div>
+          <div class="container" id="search">
+            <div class="search">
+              <a href="#">
+                <i class="fas fa-search"></i>
+              </a>
+            </div>
+            <input type="text" name="" value="" placeholder="Cerca o inizia nuova chat">
+          </div>
+          <div class="container history">
+            <div class="conv">
+              <div class="profile">
+                <a href="#">
+                  <img src="https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg" alt="">
+                </a>
+              </div>
+              <div class="histbox">
+                <div class="name">
+                  <h4>Michele </h4>
+                  <span class="time">17:33</span>
+                </div>
+                <div class="last-message">
+                  <p>This is a text</p>
+                </div>
+              </div>
+            </div>
+            <div class="conv">
+              <div class="profile">
+                <a href="#">
+                  <img src="https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg" alt="">
+                </a>
+              </div>
+              <div class="histbox">
+                <div class="name">
+                  <h4>Fabio </h4>
+                  <span class="time">17:33</span>
+                </div>
+                <div class="last-message">
+                  <p>This is a text</p>
+                </div>
+              </div>
+            </div>
+            <div class="conv">
+              <div class="profile">
+                <a href="#">
+                  <img src="https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg" alt="">
+                </a>
+              </div>
+              <div class="histbox">
+                <div class="name">
+                  <h4>Samuele </h4>
+                  <span class="time">17:33</span>
+                </div>
+                <div class="last-message">
+                  <p>This is a text</p>
+                </div>
+              </div>
+            </div>
+            <div class="conv">
+              <div class="profile">
+                <a href="#">
+                  <img src="https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg" alt="">
+                </a>
+              </div>
+              <div class="histbox">
+                <div class="name">
+                  <h4>Ale B </h4>
+                  <span class="time">17:33</span>
+                </div>
+                <div class="last-message">
+                  <p>This is a text</p>
+                </div>
+              </div>
+            </div>
+            <div class="conv">
+              <div class="profile">
+                <a href="#">
+                  <img src="https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg" alt="">
+                </a>
+              </div>
+              <div class="histbox">
+                <div class="name">
+                  <h4>Ale L </h4>
+                  <span class="time">17:33</span>
+                </div>
+                <div class="last-message">
+                  <p>This is a text</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="message-board">
+          <div class="container topbar">
+            <div class="profile">
+              <a href="#">
+                <img src="https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg" alt="">
+              </a>
+            </div>
+            <div class="current">
+              <div class="name">
+                <h4>Michele </h4>
+              </div>
+              <div class="last-online">
+                <p>last seen today at 17:25</p>
+              </div>
+            </div>
+            <div class="topicons">
+              <a href="#">
+                <i class="fas fa-search"></i>
+              </a>
+              <a href="#">
+                <i class="fas fa-paperclip"></i>
+              </a>
+              <a href="#">
+                <i class="fas fa-ellipsis-v"></i>
+              </a>
+            </div>
+          </div>
+          <div class="container chatbox">
+            <div class="friendchat box">
+              <p>hello!</p>
+              <span class="messtime">17:55</span>
+            </div>
+            <div class="mymess box">
+              <p>hello!</p>
+              <span class="messtime">17.55</span>
+            </div>
+          </div>
+          <div class="container topbar">
+            <div class="botwrap">
+              <div class="bottom">
+                <i class="far fa-smile"></i>
+              </div>
+              <div class="newmess">
+                <input id="mynewmess" type="text" name="" value="" placeholder="Type a message">
+              </div>
+              <div class="bottom">
+                <button type="button" name="button">
+                  <i class="fas fa-microphone-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
