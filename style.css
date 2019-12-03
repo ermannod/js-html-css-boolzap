@@ -173,6 +173,7 @@ a{
 
 .no-contact {
   display: none;
+  text-align: center;
 }
 
 .conv:first-child{

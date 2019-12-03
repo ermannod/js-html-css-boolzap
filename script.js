@@ -52,12 +52,25 @@ $(document).ready(function() {
 
   $("#searchname").on("keyup", function() {
     var value = $(this).val().toLowerCase();
-    var contactList = $('.conv').text();
+
+    var contactEmpty = [];
 
     $(".conv").filter(function() {
-      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+      var contact = $(this).attr("title").toLowerCase();
+      if(contact.indexOf(value) > -1) {
+        contactEmpty.push('1');
+        $(this).fadeIn(800);
+      }  else {
+        $(this).fadeOut(300);
+      }
 
+      if(contactEmpty.length == 0){
+           $('.no-contact').show();
+         } else {
+           $('.no-contact').hide();
+         }
     });
+
 
   });
 });
