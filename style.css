@@ -171,12 +171,15 @@ a{
   border-top: 1px solid #d9d6d9;
 }
 
-.conv:first-child{
-  background-color: #F8F9FA;
-
+.no-contact {
+  display: none;
 }
 
-.conv:last-child{
+.conv:first-child{
+  background-color: #F8F9FA;
+}
+
+.conv:last-child:not(.no-contact){
   border-bottom: 1px solid #d9d6d9;
 }
 
@@ -196,6 +199,7 @@ a{
 .last-message{
   color:#c6ced1;
 }
+
 
 
 /**********************/
@@ -229,7 +233,8 @@ a{
   height: 84%;
   background: url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png');
   padding: 40px 80px;
-  overflow: overlay;
+  overflow-y: overlay;
+  overflow-x: hidden;
 }
 
 ::-webkit-scrollbar{
@@ -251,6 +256,7 @@ a{
   padding: 5px 17px 13px 10px;
   position: relative;
   font-size: 20px;
+  max-width: 50%;
 }
 
 .box:not(:last-child){
