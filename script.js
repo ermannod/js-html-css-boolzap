@@ -19,7 +19,7 @@ $(document).ready(function() {
     var newMess = $('#mynewmess').val($('#mynewmess').val());
     var isClicked = false;
       if (newMess.val() != "") {
-        $('.chatbox').append('<div class="mymess box">' +  '<p>' + newMess.val() + '</p>' + '<span class="messtime">17.55</span></div>');
+        $('.chatbox.activebox').append('<div class="mymess box">' +  '<p>' + newMess.val() + '</p>' + '<span class="messtime">17.55</span></div>');
         isClicked = true;
         // reset the text field for new message
         newMess.val("");
@@ -29,7 +29,7 @@ $(document).ready(function() {
       if (isClicked == true){
         newMess.val() != "";
         setTimeout(function(){
-          $('.chatbox').append('<div class="friendchat box">' +  '<p>' + "ok" + '</p>' + '<span class="messtime">17.55</span></div>');
+          $('.chatbox.activebox').append('<div class="friendchat box">' +  '<p>' + "ok" + '</p>' + '<span class="messtime">17.55</span></div>');
         }, 1000);
       }
   });
@@ -38,10 +38,10 @@ $(document).ready(function() {
     var newMess = $('#mynewmess').val($('#mynewmess').val());
       if ( event.which == 13 ) {
         if (newMess.val() != "") {
-          $('.chatbox').append('<div class="mymess box">' +  '<p>' + newMess.val() + '</p>' + '<span class="messtime">17.55</span></div>');
+          $('.chatbox.activebox').append('<div class="mymess box">' +  '<p>' + newMess.val() + '</p>' + '<span class="messtime">17.55</span></div>');
           newMess.val("");
           setTimeout(function(){
-            $('.chatbox').append('<div class="friendchat box">' +  '<p>' + "ok" + '</p>' + '<span class="messtime">17.55</span></div>');
+            $('.chatbox.activebox').append('<div class="friendchat box">' +  '<p>' + "ok" + '</p>' + '<span class="messtime">17.55</span></div>');
           }, 1000);
         }
     }
@@ -78,14 +78,11 @@ $(document).ready(function() {
   $(".conv").click(function(){
     var currentFriend = $(this).attr("title");
     console.log(currentFriend);
-
     $(".conv").removeClass("active")
     $(this).addClass("active")
     if ($(this).hasClass("active")){
-      $(".chatbox").attr("title",currentFriend).show()
+      $(".chatbox").removeClass("activebox").hide();
+      $(".chatbox[title=" + currentFriend +']').addClass("activebox").show()
     }
-
   });
-
-
 });
