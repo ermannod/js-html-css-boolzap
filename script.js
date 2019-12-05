@@ -30,7 +30,7 @@ $(document).ready(function() {
         newMess.val() != "";
         setTimeout(function(){
           $('.chatbox.activebox').append('<div class="friendchat box">' +  '<p>' + "ok" + '</p>' + '<span class="messtime">17.55</span></div>' + '<span class="more"><i class="fas fa-sort-down"></i></span>');
-        }, 1000);
+        }, 1000); // end setTimeout
       }; // end if isCLicked
   }); // end .bottom button .click
 
@@ -100,6 +100,7 @@ $(document).ready(function() {
   // simulation of click on the first active class (else all the pictures of contacts where showing on first page load)
   $(".conv.active").trigger("click");
 
+
   // on mouse entering box shows arrow
   $(document).on("mouseenter", ".box" , function(){
     $(this).append("<span class='more'><i class='fas fa-sort-down'></i></span>").show();
@@ -127,4 +128,7 @@ $(document).ready(function() {
     $("ul").remove();
   }); //end DOM mouseleaeve box
 
+  // triggers mouseleave on switching chatbox else arrow shows on box
+  $(".box").trigger("mouseleave");
+  
 }); //end main DOM
