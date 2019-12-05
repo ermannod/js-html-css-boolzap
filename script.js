@@ -11,8 +11,7 @@ $(document).ready(function() {
     $('.bottom i').removeClass("fa-arrow-circle-right");
   });
 
-  var hour = $.now();
-  console.log(hour);
+
 
   // On clicking the arrow the end user message is added to the chat box
   $(".bottom button").click(function(){
@@ -56,9 +55,10 @@ $(document).ready(function() {
     var contactEmpty = [];
 
     $(".conv").filter(function() {
-      var contact = $(this).attr("title").toLowerCase();
+      var contact = $(this).attr("title");
       if(contact.indexOf(value) > -1) {
         contactEmpty.push('1');
+        console.log(contactEmpty);
         $(this).fadeIn(800);
       }  else {
         $(this).fadeOut(300);
@@ -71,6 +71,21 @@ $(document).ready(function() {
          }
     });
 
+  });
+
+  var currentConv = $(".conv").attr("title");
+
+  $(".conv").click(function(){
+    var currentFriend = $(this).attr("title");
+    console.log(currentFriend);
+
+    $(".conv").removeClass("active")
+    $(this).addClass("active")
+    if ($(this).hasClass("active")){
+      $(".chatbox").attr("title",currentFriend).show()
+    }
 
   });
+
+
 });

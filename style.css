@@ -169,6 +169,12 @@ a{
   height: 10%;
   position: relative;
   border-top: 1px solid #d9d6d9;
+  cursor: pointer;
+}
+
+.conv:hover{
+  background-color: #F8F9FA;
+  opacity: 0.9;
 }
 
 .no-contact {
@@ -176,7 +182,7 @@ a{
   text-align: center;
 }
 
-.conv:first-child{
+.active{
   background-color: #F8F9FA;
 }
 
@@ -236,6 +242,11 @@ a{
   padding: 40px 80px;
   overflow-y: overlay;
   overflow-x: hidden;
+  display: none;
+}
+
+.activebox{
+  display: block;
 }
 
 ::-webkit-scrollbar{
